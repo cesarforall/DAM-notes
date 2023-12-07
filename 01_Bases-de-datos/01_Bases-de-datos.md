@@ -1,6 +1,5 @@
 # Bases de datos
 ## UT 1.1 Sistemas de almacenamiento de la información
-
 ### Sistema de información
 Un sistema de información es un conjunto de elementos que almacena y gestiona datos.
 
@@ -29,3 +28,63 @@ Los tipos de sistemas de información de gestión de datos son los ficheros y ba
 Los ficheros están orientados a procesos. Los datos se almacenan de forma caótica, el almacenamiento es más costoso porque los datos son redundantes, la modificación de los mismos requiere más tiempo y puede llevar a inconsistencias.
 
 Las bases de datos permiten independendencia entre datos y aplicaciones que los gestionan. La modificación es más rápida y eficiente ya que no hay redundancia. Se usa menos espacio, hay más seguridad y documentación de los datos con metadatos. Los datos son más seguros por limitación de usuarios. Su implementación es más costosa y requiere tener personal cualificado para la gestión.
+
+## UT 1.2 Sistemas de almacenamiento de la información
+### Ficheros
+Los documentos que se almacenaban físicamente antes de la aparición de las computadoras eran de tipo contable y facturación. Con la apararición de los ordenadores y la digitalización se usó el mismo tipo de nombres de almacenaje para facilitar su adaptación al humano. Aquí aparecen los ficheros, carpetas, formularios o directorios.
+
+Un fichero es una conjunto de información relacionada, tratada como un todo y estructurada. El fuchero está compuesto por registros lógicos de datos relativos a un elemento u objeto. Cada registro lógico, a suvez, está compuesto por campos, que son detalles más pequeños de información del elemento.
+
+Para distinguir los tipos de ficheros se le agrega al nombre una extensión.
+
+En operaciones con ficheros, como mover de un disco externo a la memoria, estos se relizan en bloque o registro físico. Un bloque contiene varios registros lógicos y los máximos registro que lleva el bloque se llama factor de bloqueo.
+
+Según su contenido, los ficheros pueden ser de texto o binarios:
+
+    - Los ficheros de texto son entendidos por el ordenador sin necesidad de interpretación. Contiene caracteres, que son representaciones gráficas en pantalla. Los caracteres se almacenan en un byte (8 bits) y tiene un valor númerico hasta 256. Los primero 32 caracteres son no imprimibles y tienen información para el control de transmisiones.
+
+    - Los ficheros binarios son extructuras más complejas que requieren de interpretación. Contiene más información sobre lo que almacena. Como ejemplo archivos de imágen o de vídeo.
+
+Según u organización, los ficheros pueden ser:
+
+    - Secuenciales. El acceso a sus dados requiere que se lea todo el archivo en orden hasta terminar la lectura.
+    - Directos. Se puede acceder a sus datos sin que pasa por toda una secuencia.
+    - Indexados. Los registros están identificados con un índice y se puede acceder a los datos de forma directa buscando por el índice.
+
+Según su utilidad, los ficheros pueden ser:
+
+    - Maestros. Contienen información que se cambiará muy poco. Suelen contener datos fundamentales de la organización.
+    - Constatntes. Contienen información que va a cambiar muy poco en el tiempo.
+    - Históricos. Contienen datos de los ficheros maestros pasado un tiempo
+    - De movimiento. Contienen los cambios que se van a realizar en un fichero maestro. Son eliminados al terminarla operación
+    - De maniobra. Son ficheros auxiliares que se usan mientras se usa la aplicación. Se eliminan cuando la aplicación se cierra.
+
+Según su permanencia:
+
+Permanentes, tienen información relevante para una aplicación:
+
+    - Maestros. Datos actuales
+    - Constantes. Datos fijos que pueden cambiar muy poco como códigos postales
+    - Históricos. Contiene información de ficheros maestros, que fueron los actuales
+Temporales, se forman a partir de archivos permanentes y se eliminan cuando ya no son útiles:
+
+    - Intermedios. Guardan información que va a ser transferida a otra aplicación.
+    - De maniobra. Almacenan información que usa la aplicación que no puede ser mantenida en la memoria principal.
+    - De resultados. Contienen datos que se van a enviar a otro dispositivos como un disco o impresora
+
+El sistema operativo trata los archivos como texto o binarios.
+
+Los ficheros de texto, o también conocidos como planos tienen la extensiones según el tipo de uso:
+
+- Configuración SO: .ini, .inf, .conf
+- Código fuente de aplicaciones: .sql, .java, .c
+- Páginas web: .html, .css, .xml
+- Texto enriquecido: .rtf, .ps, .tex
+
+Los ficheros binarios, que necesitan un formato para ser interpretados:
+
+- De imágen: .jpg, .gif, .bmp, .png, etc
+- De vídeo: .mov, .avi, .mpg
+- Comprimidos o empaquetados: .zip, .Z, .tar
+- Ejecutables o compilados: .exe, .com, .cgi
+- Procesadores de texto: .docx, .odt
