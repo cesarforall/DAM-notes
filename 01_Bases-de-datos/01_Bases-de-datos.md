@@ -88,3 +88,41 @@ Los ficheros binarios, que necesitan un formato para ser interpretados:
 - Comprimidos o empaquetados: .zip, .Z, .tar
 - Ejecutables o compilados: .exe, .com, .cgi
 - Procesadores de texto: .docx, .odt
+
+## UT 1.3 Sistemas de almacenamiento de la información
+### Concepto, usos y tipos de bases de datos
+
+Una base de datos es un sistema de almacenamiento donde los datos pueden ser tratados de forma independiente del sistema de gestión de la misma.
+
+La base de datos evita la redundacia en los datos, es más segura porque se limita el uso y más eficaz en el acceso a los datos.
+
+Los datos no son lo mismo que la información. Un dato es valor que se almacena en un campo y puede ser numérico o alfanumérico. La información es la interpretación del conjunto de datos.
+
+Conceptos
+
+    - Entidad. Objeto real o abstracto que representa información diferenciada.
+    - Atributo. Propiedades que almacena una entidad
+    - Registro. Instacia de del modelo de datos de una entidad.
+    - Campo. Identificador de una familia de datos donde se almacenan un tipo de dato, considerado propiedad o atributo.
+    - Campo clave. Identificador único de un registro.
+    - Metadatos. Son informaciones adicionales de lo que debe contener la base de datos. Se almacena en diccionario de datos o catálogo.
+
+El esquema de una base de datos se representa como una tabla. Donde cada fila es un registro y cada columna contiene un tipo de dato. Se considera metainformación.
+
+Las aplicaciones pueden acceder a los datos gracias al esquema, el cual permite una independencia.
+
+Los usuarios de los datos:
+
+- Administrador. Se encarga de las decisiones de gestión de bases de datos y disposición de los mismos.
+- Diseñador. Implementa los esquemas y modelos según las necesidades de la organización.
+- Programador. Se encargan de las aplicaciones que van a realizar las consultas y modificaciones de las bases de datos.
+- Usuario final. Es la persona que va a hacer uso de las aplicaciones y va a recibir los datos.
+
+La evolución de las bases de datos ha pasado por los siguientes tipos:
+
+- Jeráquica. Los datos se presentan en un modelo padre hijo donde las relaciones pueden ser 1 a muchos y se almacenan en estructuras lógicas y se relacionan entre sí por arcos.
+- De red. La información se organiza en registros, nodos y enlaces.
+- Relacional. Los datos se almacenan en registros con claves principales, cuyas tablas se pueden relacionar entre muchos.
+- Orientada a objetos.
+- Multidimensional o cubos.
+- NoSQL.
