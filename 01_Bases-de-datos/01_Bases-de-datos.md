@@ -89,38 +89,62 @@ Los ficheros binarios, que necesitan un formato para ser interpretados:
 
 ### Bases de Datos (BD). Conceptos, usos y tipos según el modelo de datos, la ubicación de la información.
 
-Una base de datos es un sistema de almacenamiento donde los datos pueden ser tratados de forma independiente del sistema de gestión de la misma.
+Una base de datos es una colección de datos basada en una estructura que evita la redundancia. Es independiente del gestor o aplicación que modifica o consulta los datos.
 
-La base de datos evita la redundacia en los datos, es más segura porque se limita el uso y más eficaz en el acceso a los datos.
+#### Conceptos
+    - Dato. Un dato un el registro único.
+    - Información. Es un dato puesto en contexto.
+    - Entidad. Es la representación de un objeto real o abstracto que tiene características diferenciadas.
+    - Atributo. Es una propiedad o característica de una entidad.
+    - Registro. Es una instacia de un modelo de datos de una entidad.
+    - Campo. Es un identificador de una familia de datos o atributo que contiene un mismo tipo de dato.
+    - Campo clave. Es un identificador único de un registro.
+    - Metadatos. Es la descripción de los datos que contiene la bases de datos. Se almacena en el diccionario de datos o catálogos.
+    - Esquema. Es la definición de la estructura y forma en la que se tratan los datos.
 
-Los datos no son lo mismo que la información. Un dato es valor que se almacena en un campo y puede ser numérico o alfanumérico. La información es la interpretación del conjunto de datos.
+#### Usos
+El objetivo de la utilización de la base de datos es el acceso a los mismo mediante un sistema gestor de base de datos (SGBD) sin conocer cómo están aquellos almacenados.
 
-Conceptos
+Los tipos de usuarios que utilizarán las bases de datos son:
+- Administrador. Es quien crea e implementa físicamente la base de datos. Toma las decisiones sobre el almacenamiento de la información, políticas de seguridad y restricciones. 
+- Diseñador. Identifica los datos a tratar. Diseña los esquemas y modelos con sus relaciones. Tiene en cuenta a los usuarios, restricciones y políticas de seguridad.
+- Programador. Crea las aplicaciones que van a usar las bases de datos y van destinadas al usuario final.
+- Usuario final. Es la persona que va a tratar los datos mediante el uso de las aplicaciones.
 
-    - Entidad. Objeto real o abstracto que representa información diferenciada.
-    - Atributo. Propiedades que almacena una entidad
-    - Registro. Instacia de del modelo de datos de una entidad.
-    - Campo. Identificador de una familia de datos donde se almacenan un tipo de dato, considerado propiedad o atributo.
-    - Campo clave. Identificador único de un registro.
-    - Metadatos. Son informaciones adicionales de lo que debe contener la base de datos. Se almacena en diccionario de datos o catálogo.
+Ejemplos de usos de bases de datos:
+- Banca. información de clientes, cuentas, préstamos.
+- Hostelería y turismo. Reservas, vuelos, excursiones.
+- Educación. Alumnos, asignaturas, notas.
+- Aerolíneas. Aeropuertos, duración, conexiones.
 
-El esquema de una base de datos se representa como una tabla. Donde cada fila es un registro y cada columna contiene un tipo de dato. Se considera metainformación.
+#### Tipos según el modelo de datos
+Un modelo de datos es un conjunto de características que cumple una base de datos
 
-Las aplicaciones pueden acceder a los datos gracias al esquema, el cual permite una independencia.
+Jeráquica
+- Se presenta en los años sesenta como modelo para tratar la información
+- La estructura tiene forma de árbol. Las entidades se relacionan de padre hijo mediante nodos. La estructura lógica del nodo se llama segmento y su relación con otros nodos se hace mediante arcos.
+- Su relación es 1:N
+- Un segmento hijo no puede tener más de un padre
+- No puede haber más de una relación entre dos segmentos
+- Para llegar a un segmento se empieza por la raiz
+- El recorrido del árbol tiene un orden determinado
 
-Los usuarios de los datos:
+De red
+- Utiliza nodos y enlaces para relacionar los datos
+- Un nodo puede tener más de un padre N:M
 
-- Administrador. Se encarga de las decisiones de gestión de bases de datos y disposición de los mismos.
-- Diseñador. Implementa los esquemas y modelos según las necesidades de la organización.
-- Programador. Se encargan de las aplicaciones que van a realizar las consultas y modificaciones de las bases de datos.
-- Usuario final. Es la persona que va a hacer uso de las aplicaciones y va a recibir los datos.
+Relacional
+- Almacena los datos en una estructura lógica con forma de tabla que representa un objeto real o conceptual que tiene atributos.
+- El nombre de la tabla o el objeto que representa se llama entidad.
+- Los atributos son los nombres de una familia de un tipo de dato en la tabla y se almacenan en campos.
+- Las filas son una instancia de la entidad con los valores en cada campo. También se llaman registros y deben tener una clave única para evitar la redundancia.
+- Se llama relacional porque las entidades se relacionan entre sí mediante un verbo.
+- La estructura lógica se separa de la estructura física.
 
-La evolución de las bases de datos ha pasado por los siguientes tipos:
+Orientada a objetos
+-   
 
-- Jeráquica. Los datos se presentan en un modelo padre hijo donde las relaciones pueden ser 1 a muchos y se almacenan en estructuras lógicas y se relacionan entre sí por arcos.
-- De red. La información se organiza en registros, nodos y enlaces.
-
-- Relacional. Los datos se almacenan en registros con claves principales, cuyas tablas se pueden relacionar entre muchos.
-- Orientada a objetos.
-- Multidimensional o cubos.
-- NoSQL.
+Multidimensional o cubos
+- 
+NoSQL
+- 
