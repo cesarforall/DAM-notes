@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Document Type Definition-->
+<!DOCTYPE campeonato [
+    <!ELEMENT campeonato (titulo, ubicacion, jugadores+, arbitros+)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT ubicacion (#PCDATA)>
+    <!ELEMENT jugadores (jugador+)>
+    <!ELEMENT jugador (nombre_jugador, apellido_jugador, fecha_inscripcion)>
+    <!ATTLIST jugador clasificacion NMTOKEN #REQUIRED>
+    <!ELEMENT nombre_jugador (#PCDATA)>
+    <!ELEMENT apellido_jugador (#PCDATA)>
+    <!ELEMENT fecha_inscripcion (#PCDATA)>
+]>
